@@ -1,0 +1,106 @@
+
+Functions and Methods Homework
+Complete the following questions:
+
+1.Write a function that computes the volume of a sphere given its radius.
+
+def vol(rad):
+    return ((4/3)*(3.14)*(rad**3))
+
+
+
+2.Write a function that checks whether a number is in a given range (inclusive of high and low)
+
+
+def ran_check(num, low, high):
+    if num in list(range(low, high+1)):
+        print (num,"is in the range beween",low,"and",high)
+    else:
+        print (num,"is NOT in the range beween",low,"and",high)
+
+
+
+3.Write a Python function that accepts a string and calculates the number of upper case letters and lower case letters.
+
+Sample String : 'Hello Mr. Rogers, how are you this fine Tuesday?'
+Expected Output : 
+No. of Upper case characters : 4
+No. of Lower case Characters : 33
+
+HINT: Two string methods that might prove useful: .isupper() and .islower()
+
+If you feel ambitious, explore the Collections module to solve this problem!
+
+
+def up_low(s):
+    
+    up_list = 0
+    low_list = 0
+
+    for char in s:
+        if (char.isupper()) == True:
+            up_list += 1
+        elif (char.islower()) == True:
+            low_list += 1
+
+    print ("No. of upper case characters:", up_list)
+    print ("No. of lower case characters:", low_list)
+
+
+
+
+4. 
+Write a Python function that takes a list and returns a new list with unique elements of the first list.
+
+Sample List : [1,1,1,1,2,2,3,3,3,3,4,5]
+Unique List : [1, 2, 3, 4, 5]
+
+
+def unique_list(lst):
+    new_list = []
+    for num in lst:
+        if num not in new_list:
+            new_list.append(num)
+    new_list.sort()
+    return new_list
+
+
+5. 
+Write a Python function to multiply all the numbers in a list.
+
+Sample List : [1, 2, 3, -4]
+Expected Output : -24
+
+def multiply(numbers):
+    total = 1
+    for num in numbers:
+        total = (num * total)
+    return total
+
+
+6. 
+Write a Python function that checks whether a passed in string is palindrome or not.
+
+Note: A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
+
+
+7. 
+Hard:
+Write a Python function to check whether a string is pangram or not.
+
+Note : Pangrams are words or sentences containing every letter of the alphabet at least once.
+For example : "The quick brown fox jumps over the lazy dog"
+
+Hint: Look at the string module
+
+import string
+
+def ispangram(str1, alphabet=string.ascii_lowercase):
+    
+    str1_list = list(set(str1.lower()))
+    str1_list.sort()
+    str1_list = str1_list[1:]
+    if str1_list == alphabet:
+        return True
+    else:
+        return False
