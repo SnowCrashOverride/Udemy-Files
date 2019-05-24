@@ -3,7 +3,7 @@ player1_list = []
 player2_list = []
 
 
-def player_marker_input():
+def player_marker_input(): 
     
     player1 = ' '
     player2 = ' '
@@ -75,14 +75,8 @@ def player1_space_input(player1_marker, board_list):
         else:
             print("That space is already taken")
 
-
     return (player1_list)
         
-
-
-
-
-
 
 def player2_space_input(player2_marker, board_list):
 
@@ -138,7 +132,6 @@ def player2_space_input(player2_marker, board_list):
         else:
             print("That space is already taken")
 
-
     return (player2_list)
   
 
@@ -176,8 +169,6 @@ def check_winner(player1_list, player2_list):
         return True
 
 
-    
-        
 def display_board(board_list):
     s1 = board_list[0]
     s2 = board_list[1]
@@ -210,10 +201,7 @@ def main():
     display_board(board_list)
 
     while True:
-
-
-
-        
+   
         player1_list = player1_space_input(player1_marker, board_list)
         display_board(board_list)
         player1_list.sort()
@@ -225,10 +213,7 @@ def main():
         if count == 9:
             print ("It's a tie! Nobody wins!")
             break
-
-
-
-        
+     
         player2_list = player2_space_input(player2_marker, board_list)
         display_board(board_list)
         player2_list.sort()
@@ -242,15 +227,6 @@ def main():
             break
 
         
-
-
-
-
-
-
-
-
-#print ('\n'*49)
 if __name__ == '__main__':
     main()
 
