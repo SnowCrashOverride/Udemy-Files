@@ -1,0 +1,52 @@
+Errors and Exceptions Homework
+Problem 1
+Handle the exception thrown by the code below by using try and except blocks.
+
+a = 1
+b = 4
+c = 17
+?
+try:
+    for i in ['a','b','c']:
+        print(i**2)
+except TypeError:
+    print("Hey those need to be numbers!")
+Hey those need to be numbers!
+Hey those need to be numbers!
+Hey those need to be numbers!
+Problem 2
+Handle the exception thrown by the code below by using try and except blocks. Then use a finally block to print 'All Done.'
+
+)
+x = 5
+y = 0
+?
+try:
+    z = x/y
+    
+except ZeroDivisionError:
+    print (x)
+    
+finally:
+    print ('All Done')
+5
+All Done
+Problem 3
+Write a function that asks for an integer and prints the square of it. Use a while loop with a try, except, else block to account for incorrect inputs.
+
+ 
+def ask():
+    while True:
+        
+        my_int = int(input("Please enter a number to find the square: "))
+        
+        try: 
+            print ("Thank you, the square is: ", my_int**2)
+            break
+        except:
+            print ("That's not a number! Try again! \n")
+            continue
+        else:
+            break
+    
+ask()
